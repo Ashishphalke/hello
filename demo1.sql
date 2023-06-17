@@ -1,0 +1,17 @@
+SELECT * FROM test.product;
+alter table orders add foreign key (pid) references product(pid);
+select * from test.orders;
+insert into orders value(5,10,6);
+create table person (pid int primary key , pname varchar(20), age int check(age>0));
+insert into person value(1,'Pushkar',24);
+drop table person;
+create table person (pid int primary key , pname varchar(20), age int check(age>0), address varchar(20) default 'Pune' );
+insert into person values(1,'Pushkar',24);
+insert into person(pid,pname,age) values(1,'Megha',29);
+drop table person;
+create table person (pid int primary key , pname varchar(20), age int check(age>0), address varchar(20) default 'Pune' );
+insert into person values(1,'Pushkar',24,'Pune');
+select * from test.person;
+select * from student;
+desc student;
+insert into student values(1,"lalita",32,"mumbai");

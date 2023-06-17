@@ -1,0 +1,18 @@
+create table book(bookid int , bookname varchar(20));
+create table bookprice(bookid int , price int);
+insert into book values(1,'SQL');
+insert into book values(2,'PLSQL');
+insert into book values(4,'MySQL');
+insert into book values(5,'Oracle');
+insert into bookprice values(1,200);
+insert into bookprice values(3,300);
+insert into bookprice values(6,500);
+select * from book;
+select * from bookprice;
+select * from book,bookprice where book.bookid=bookprice.bookid;
+select * from test.books;
+select * from test.book;
+select * from test.bookprice;
+select * from book left join bookprice on book.bookid=bookprice.bookid;
+select * from book right join bookprice on book.bookid=bookprice.bookid;
+select * from book full join bookprice on book.bookid=bookprice.bookid;
